@@ -12,7 +12,7 @@
     </head>
 
     <body>
-        <!--<script src="js/"></script>-->
+        <script src="js/email-form.js"></script>
         <div id="nav-bar">
             <ul class="nav">
                 <li><a href="http://surrsur.us/">Home</a></li>
@@ -24,7 +24,20 @@
             <hr class="divider">
         </div>
         <div id="content">
-            <p>Under construction. Links are broken.</p>
+            <div id="topic">
+                <ul>
+                    <li class="plaintext"><p>Contact Me</p></li>
+                    <li class="phonetic"><p>/kantækt mi/</p></li>
+                </ul>
+                <p>Leave your email in the convienient form below. Or you can shoot me an email at <a href="mailto:gray@surrsur.us">gray@surrsur.us</a>.
+            </div>
+            <div id="js-email-form">
+                <ul>
+                    <li><div id="js-email-content"><p>a@gmail.com</p></div></li>
+                    <li class="button"><button type="button" id="js-email-adder-button" onClick="EmailForm.buttonPress()">+</button></li>
+                    <li class="button"><button type="button" id="js-email-submit-button">Submit</button></li>
+                </ul>
+            </div>
         </div>
     </body>
 </html>

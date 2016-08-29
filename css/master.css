@@ -68,6 +68,33 @@ body {
     text-decoration: none
 }
 
+#js-email-form ul {
+    text-align: center;
+    margin: auto;
+}
+
+#js-email-form li {
+    display: inline-block;
+    margin-top: -.6em;
+    margin-bottom: -1em;
+}
+
+#js-email-form button {
+    height: 30px;
+    width: auto;
+    background: #fff;
+    color: #444;
+    border: 1px solid #444;
+    margin-top: 25px;
+    margin-left: 15px;
+    /* Apparently this violates CSS standards. Still leaving it in */
+    cursor: pointer;
+}
+
+#js-email-adder-button {
+
+}
+
  hr.divider {
      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
      border: none;

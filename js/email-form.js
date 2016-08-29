@@ -1,5 +1,9 @@
 'use strict';
 
+// Email form manager. Allows users to input their emails in the best way possible.
+// Requires an output div with ID js-email-content and then two buttons to link
+// the increment and submit actions to.
+
 String.prototype.replaceAt = function(index, character) {
     return this.substr(0, index) + character + this.substr(index+character.length);
 }
@@ -28,9 +32,9 @@ var EmailForm = {
         for ( var i = 0; i < this.currentEmail.length; i++ ) {
             if ( this.currentEmail.charAt(i) == "z" ) {
                 if ( i + 1 < this.currentEmail.length ) {
-                    this.currentEmail = this.currentEmail.replaceAt(i + 1, nextChar(this.currentEmail.charAt(i + 1)))
+                    this.currentEmail = this.currentEmail.replaceAt(i + 1, nextChar(this.currentEmail.charAt(i + 1)));
                 } else {
-                    this.currentEmail += "a"
+                    this.currentEmail += "a";
                 }
                 this.currentEmail = this.currentEmail.replaceAt(i, "a");
             }
@@ -42,9 +46,9 @@ var EmailForm = {
         // If the first letter does not equal z, increment it
         // Otherwise check all other spaces
         if ( this.currentEmail.charAt(0) != "z" ) {
-            this.currentEmail = this.currentEmail.replaceAt(0, nextChar(this.currentEmail.charAt(0)))
+            this.currentEmail = this.currentEmail.replaceAt(0, nextChar(this.currentEmail.charAt(0)));
         } else {
-            this.checkZs()
+            this.checkZs();
         }
     },
 
@@ -56,8 +60,8 @@ var EmailForm = {
 
     // Increment button press action
     incButtonPress: function () {
-        this.incrementEmail()
-        this.updateEmail()
+        this.incrementEmail();
+        this.updateEmail();
     },
 
     // Submit the email

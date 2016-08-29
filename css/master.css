@@ -40,7 +40,7 @@ body {
 
 #topic li.plaintext {
     font-size: 24px;
-    width: 10em;
+    width: 13em;
 }
 
 #topic li.phonetic {
@@ -91,8 +91,51 @@ body {
     cursor: pointer;
 }
 
-#js-email-adder-button {
+#js-phone-form ul {
+    text-align: center;
+    margin: auto;
+}
 
+#js-phone-form li {
+    display: inline-block;
+    margin-top: -.6em;
+    margin-bottom: -1em;
+}
+
+#js-phone-form input[type=range] {
+    margin-top: 15px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+
+    /* Fix for FF unable to apply focus style bug  */
+    border: 1px solid white;
+
+    /* Required for proper track sizing in FF */
+    width: 300px;
+}
+
+input[type=range]::-webkit-slider-runnable-track, input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb, input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #777;
+    margin-top: -4px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track, input[type=range]:focus::-moz-range-track {
+    background: #ddd;
 }
 
  hr.divider {

@@ -13,6 +13,7 @@
 
     <body>
         <script src="js/email-form-min.js"></script>
+        <script src="js/phone-form.js"></script>
         <div id="nav-bar">
             <ul class="nav">
                 <li><a href="http://surrsur.us/">Home</a></li>
@@ -29,14 +30,25 @@
                     <li class="plaintext"><p>Contact Me</p></li>
                     <li class="phonetic"><p>/kantækt mi/</p></li>
                 </ul>
-                <p>Leave your email in the convienient form below. Or you can shoot me an email at <a href="mailto:gray@surrsur.us">gray@surrsur.us</a>.
             </div>
+            <p>Leave your information in the convienient form below. Or you can shoot me an email at <a href="mailto:gray@surrsur.us">gray@surrsur.us</a>.
             <div id="js-email-form">
                 <ul>
+                    <li class="descriptor"><p>Enter your email</p></li>
                     <li><div id="js-email-content"><p>a@gmail.com</p></div></li>
                     <li class="button"><button type="button" id="js-email-adder-button" onClick="EmailForm.incButtonPress()">+</button></li>
                     <li class="button"><button type="button" id="js-email-submit-button" onClick="EmailForm.submitButtonPress()">Submit</button></li>
                 </ul>
+                <noscript><p>This email form won't work without javascript</p></noscript>
+            </div>
+            <p></p>
+            <div id="js-phone-form">
+                <ul>
+                    <li><p>Enter your phone number</p></li>
+                    <li><input type="range" min="1000000000" max="9999999999" value="5555555555" step="1" onchange="PhoneForm.updateValue(this.value)"/></li>
+                    <li><div id="js-phone-range"><p></p></li>
+                </ul>
+                <noscript><p>This phone form won't work without javascript</p></noscript>
             </div>
         </div>
     </body>

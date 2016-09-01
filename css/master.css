@@ -181,7 +181,8 @@ input[type=range]:-moz-focusring{
 hr.divider:after {
     background: white;
 
-    content: "ยง";
+    /*content: "⁂";*/
+    content: "§";
     font-size: 1.5em;
 
     display: inline-block;

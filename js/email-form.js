@@ -13,12 +13,12 @@ function nextChar(c) {
 }
 
 var EmailForm = {
-    currentEmail: "a",          // Store the current email as a string
-    extension: "@gmail.com",    // Store the extension used
+    currentEmail: 'a',          // Store the current email as a string
+    extension: '@gmail.com',    // Store the extension used
 
     // Return an array of the current email (minus extension)
     getEmailArray: function () {
-        return this.currentEmail.split("");
+        return this.currentEmail.split('');
     },
 
     // Return the email with extension
@@ -30,13 +30,13 @@ var EmailForm = {
     // If there are Zs, increment next letter or add it if it's not there
     checkZs: function () {
         for ( var i = 0; i < this.currentEmail.length; i++ ) {
-            if ( this.currentEmail.charAt(i) == "z" ) {
+            if ( this.currentEmail.charAt(i) == 'z' ) {
                 if ( i + 1 < this.currentEmail.length ) {
                     this.currentEmail = this.currentEmail.replaceAt(i + 1, nextChar(this.currentEmail.charAt(i + 1)));
                 } else {
-                    this.currentEmail += "a";
+                    this.currentEmail += 'a';
                 }
-                this.currentEmail = this.currentEmail.replaceAt(i, "a");
+                this.currentEmail = this.currentEmail.replaceAt(i, 'a');
             }
         }
     },
@@ -45,7 +45,7 @@ var EmailForm = {
     incrementEmail: function () {
         // If the first letter does not equal z, increment it
         // Otherwise check all other spaces
-        if ( this.currentEmail.charAt(0) != "z" ) {
+        if ( this.currentEmail.charAt(0) != 'z' ) {
             this.currentEmail = this.currentEmail.replaceAt(0, nextChar(this.currentEmail.charAt(0)));
         } else {
             this.checkZs();
@@ -55,7 +55,7 @@ var EmailForm = {
     // Set the designated element with id to have the contents of the email
     // Depends on the existance of a div with a js-email-content ID
     updateEmail: function () {
-        document.getElementById("js-email-content").innerHTML = "<p>" + this.getFullEmail() + "</p>";
+        document.getElementById('js-email-content').innerHTML = '<p>' + this.getFullEmail() + '</p>';
     },
 
     // Increment button press action
@@ -66,7 +66,7 @@ var EmailForm = {
 
     // Submit the email
     submitButtonPress: function () {
-        this.currentEmail = "a";
+        this.currentEmail = 'a';
         this.updateEmail();
     }
 }

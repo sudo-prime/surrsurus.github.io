@@ -6,13 +6,13 @@ function include(arr, obj) {
 
 var PhoneForm = {
     updateValue: function (val) {
-        var phoneString = ""
+        var phoneString = ''
         for ( var i = 0; i < val.toString().length; i++ ) {
             if ( include ([3, 6], i) ) {
-                phoneString += "-"
+                phoneString += '-'
             }
-            phoneString += val.toString().split("")[i]
+            phoneString += val.toString().split('')[i]
         }
-        document.getElementById("js-phone-range").innerHTML = "<p>" + phoneString + "</p>";
+        document.getElementById('js-phone-range').innerHTML = '<p>' + phoneString + '</p>';
     }
 }

@@ -80,15 +80,8 @@ body {
 }
 
 #js-email-form button {
-    height: 30px;
-    width: auto;
-    background: #fff;
-    color: #444;
-    border: 1px solid #444;
-    margin-top: 25px;
+	margin-top: 25px;
     margin-left: 15px;
-    /* Apparently this violates CSS standards. Still leaving it in */
-    cursor: pointer;
 }
 
 #js-phone-form ul {
@@ -106,9 +99,31 @@ body {
     margin-top: 15px;
 }
 
+#js-text-to-ipa-form ul {
+    text-align: center;
+}
+
+#js-text-to-ipa-form li {
+    display: block;
+}
+
+#js-text-to-ipa-form button {
+    margin: 10px;
+}
+
+button {
+	height: 30px;
+    width: auto;
+    background: #fff;
+    color: #444;
+    border: 1px solid #444;
+    /* Apparently this violates CSS standards. Still leaving it in */
+    cursor: pointer;
+}
+
 input[type=range]{
     /* fix for FF unable to apply focus style bug  */
-    border: 1px solid white; 
+    border: 1px solid white;
 
     /*required for proper track sizing in FF*/
     width: 300px;
@@ -135,7 +150,7 @@ input[type=range]::-webkit-slider-thumb {
     border-radius: 50%;
     background: #777;
     margin-top: -4px;
-	
+
 }
 
 input[type=range]:focus {

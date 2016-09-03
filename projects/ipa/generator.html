@@ -13,17 +13,46 @@
 
     <body>
         <script src="./text-to-ipa.js"></script>
+		<script src="./tti-ui.js"></script>
         <div id="nav-bar">
             <ul class="nav">
                 <li><a href="http://surrsur.us/">Home</a></li>
 
                 <!-- Not the intended order, ends up being inverted in browser -->
-                <li style="float:right"><a href="about.html">About Me</a></li>
-                <li style="float:right"><a href="contact.html">Contact</a></li>
+                <li style="float:right"><a href="../../about.html">About Me</a></li>
+                <li style="float:right"><a href="../../contact.html">Contact</a></li>
             </ul>
             <hr class="divider">
         </div>
         <div id="content">
+			<div id="topic">
+                <ul>
+                    <li class="plaintext"><p>English to IPA</p></li>
+                    <li class="phonetic"><p>/ɪŋglɪʃ tuː aɪ-piː-eɪ/</p></li>
+                </ul>
+                <p>Use the following text areas to convert english to it's IPA equivalent.</p>
+                <p>This is NOT case sensitive and punctuation is ignored.</p>
+            </div>
+			<div id="js-text-to-ipa-form">
+				<ul>
+					<li><textarea id="ipa-in" placeholder="Write text here!" rows="4" cols="50"></textarea></li>
+					<li class="button"><button type="button" id="js-ipa-submit" onClick="TTIForm.convert()">Convert!</button></li>
+					<li><textarea readonly id="ipa-out" placeholder="aʊtpʊt gəʊz hɪə!" rows="4" cols="50"></textarea></li>
+				</ul>
+				<ul>
+					<li><noscript><p>This converter will not work unless Javascript is enabled.</p></noscript></li>
+					<li><div id="ipa-err-undef"></div></li>
+					<li><div id="ipa-warn-multi"></div></li>
+				</ul>
+			</div>
+            <div id="topic">
+                <ul>
+                    <li class="plaintext"><p>How does it work?</p></li>
+                    <li class="phonetic"><p>/hawˈ dʌˈz ɪˈt wɚˈk?/</p></li>
+                </ul>
+                <p>This converter will simply look up each word in the CMU to IPA dictionary, and pop out the resulting phonetic text.</p>
+                <p>This was kind of a pain to get working, as most of the time was found looking for a good IPA dictionary which was ultimately found <a href="http://people.umass.edu/nconstan/CMU-IPA/">here</a>.</p>
+            </div>
         </div>
     </body>
 </html>

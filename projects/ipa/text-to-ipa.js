@@ -34,25 +34,27 @@ var TextToIPA = {
         txtFile.send(null);
     },
     // Lookup a word in a dictionary
+    // Returns array of type of word pronunciation and the word
     lookup: function (word) {
         // It is possible to return undefined, so that case should not be ignored
         if ( typeof this.ipadict[word] != "undefined" ) {
             // Some words in english have multiple pronunciations (maximum of 4 in this dictionary)
+            // TODO: I think there's a better way of doing this
             if ( typeof this.ipadict[word + "(1)"] != "undefined" ) {
                 if ( typeof this.ipadict[word + "(2)"] != "undefined" ) {
                     if ( typeof this.ipadict[word + "(3)"] != "undefined" ) {
-                        return this.ipadict[word] + " OR " + this.ipadict[word + "(1)"] + " OR " + this.ipadict[word + "(2)"] + " OR " + this.ipadict[word + "(3)"]
+                        return ["multi", this.ipadict[word] + " OR " + this.ipadict[word + "(1)"] + " OR " + this.ipadict[word + "(2)"] + " OR " + this.ipadict[word + "(3)"]]
                     } else {
-                        return this.ipadict[word] + " OR " + this.ipadict[word + "(1)"] + " OR " + this.ipadict[word + "(2)"]
+                        return ["multi", this.ipadict[word] + " OR " + this.ipadict[word + "(1)"] + " OR " + this.ipadict[word + "(2)"]]
                     }
                 } else {
-                    return this.ipadict[word] + " OR " + this.ipadict[word + "(1)"]
+                    return ["multi", this.ipadict[word] + " OR " + this.ipadict[word + "(1)"]]
                 }
             } else {
-                return this.ipadict[word]
+                return ["normal", this.ipadict[word]]
             }
         } else {
-            return undefined
+            return [undefined, word]
         }
     }
 }

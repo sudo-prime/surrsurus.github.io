@@ -2,7 +2,8 @@
 
 var TextToIPA = {
     location: './ipadict.txt', // Probably should use json, but this dictionary will do
-    ipadict: {},
+    ipadict: {}, // Empty IPA dict, gets updated on window load
+
     // Parse array from read file to the dictionary
     parseDict: function (lines) {
         console.log("beginning parsing to dict...");
@@ -14,6 +15,7 @@ var TextToIPA = {
 
         console.log("done parsing");
     },
+
     // Loads dictionary to object for lookups
     // MUST run when page is loaded, or this entire thing is useless
     loadDict: function () {
@@ -59,4 +61,5 @@ var TextToIPA = {
     }
 }
 
+// Load dict
 window.onload = TextToIPA.loadDict();

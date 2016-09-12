@@ -16,7 +16,7 @@ var TTIForm = {
 	},
     // Update the DOM to show the current error messages
 	updateMsgs: function () {
-		document.getElementById("ipa-err").innerHTML = "<p>" + this.currErrMsg + " " + this.currMulMsg "</p>";
+		document.getElementById("ipa-err").innerHTML = "<p>" + this.currErrMsg + " " + this.currMulMsg + "</p>";
 	},
     // Output the converted IPA text to the DOM
 	updateTextarea: function (IPAText) {

@@ -201,7 +201,7 @@ ul.nav li a:hover {
 
 #topic li.plaintext {
     font-size: 24px;
-    width: 13em;
+    width: auto;
 }
 
 #topic li.phonetic {
@@ -210,6 +210,7 @@ ul.nav li a:hover {
     padding-top: 8px;
     font-style: italic;
     color: #777;
+    display: none;
 }
 
 #topic li.link {

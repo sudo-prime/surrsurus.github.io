@@ -10,14 +10,14 @@ var TTIForm = {
     currErrMsg: "",
     currMulMsg: "",
     // Reset the currently displayed error messages
-	resetErrMsgs: function () {
-		this.currErrMsg = "";
-		this.currMulMsg = "";
-	},
+    resetErrMsgs: function () {
+    	this.currErrMsg = "";
+	this.currMulMsg = "";
+    },
     // Update the DOM to show the current error messages
-	updateMsgs: function () {
-		document.getElementById("ipa-err").innerHTML = "<p>" + this.currErrMsg + " " + this.currMulMsg + "</p>";
-	},
+    updateMsgs: function () {
+	document.getElementById("ipa-err").innerHTML = "<p>" + this.currErrMsg + " " + this.currMulMsg + "</p>";
+    },
     // Output the converted IPA text to the DOM
 	updateTextarea: function (IPAText) {
 		document.getElementById("ipa-out").value = IPAText

@@ -5,10 +5,10 @@ var TTIForm = {
     // Error message if a word isn't in the IPA dictionary
     undefMsg: "Some words you have entered cannot be found in the IPA dictionary.",
     // Error/Warning message if a word has multiple pronunciations
-	multiMsg: "Some words you have entered have multiple pronunciations in english. These differences are seperated with 'OR'",
+    multiMsg: "Some words you have entered have multiple pronunciations in english. These differences are seperated with 'OR'",
     // Currently displayed error messages
     currErrMsg: "",
-	currMulMsg: "",
+    currMulMsg: "",
     // Reset the currently displayed error messages
 	resetErrMsgs: function () {
 		this.currErrMsg = "";
@@ -16,8 +16,7 @@ var TTIForm = {
 	},
     // Update the DOM to show the current error messages
 	updateMsgs: function () {
-		document.getElementById("ipa-err-undef").innerHTML = "<p>" + this.currErrMsg + "</p>";
-		document.getElementById("ipa-warn-multi").innerHTML = "<p>" + this.currMulMsg + "</p>";
+		document.getElementById("ipa-err").innerHTML = "<p>" + this.currErrMsg + " " + this.currMulMsg "</p>";
 	},
     // Output the converted IPA text to the DOM
 	updateTextarea: function (IPAText) {

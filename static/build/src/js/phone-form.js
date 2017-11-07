@@ -21,13 +21,5 @@ var PhoneForm = {
         }
         // Update DOM object that shows the phone number
         document.getElementById('js-phone-range').innerHTML = '<p>' + phoneString + '</p>';
-    },
-
-    submitButtonPress: function () {
-      this.updateValue(5555555555);
     }
-}
-
-window.onload = function() {
-  PhoneForm.updateValue(5555555555);
 }

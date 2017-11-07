@@ -1,6 +1,5 @@
 html {
-    background-color: #fffff9;
-    overflow-y: scroll;
+    background-color: #fff;
 }
 
 body {
@@ -43,7 +42,7 @@ hr.divider {
 }
 
 hr.divider:after {
-   background: inherit;
+   background: white;
 
    /* content: "⁂"; Doesn't show up propery on some windows oses */
    content: "§";

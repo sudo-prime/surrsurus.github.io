@@ -9,30 +9,17 @@
     <meta name="description" content="An Contact Page">
     <meta name="author" content="Gray <gray@surrsur.us>">
 
-    <link href="https://fonts.googleapis.com/css?family=Brawler" rel="stylesheet"> 
+    {{includes}}
     <link rel="stylesheet" href="./css/master.css">
 
   </head>
 
   <body>
 
-    <script src="js/email-form.js"></script>
-    <script src="js/phone-form.js"></script>
+    <script src="js/email-form-min.js"></script>
+    <script src="js/phone-form-min.js"></script>
       
-    <div id="nav-bar">
-      <ul class="nav">
-        <li><a href="http://surrsur.us/">Home</a></li>
-        <li class="dropdown"><a href="http://surrsur.us/projects.html">Projects</a>
-          <div class="dropdown-content">
-            <a href="http://surrsur.us/projects/ipa/english-to-ipa.html">English to IPA</a>
-          </div>
-        </li>
-        <!-- Not the intended order, ends up being inverted in browser -->
-        <li style="float:right"><a href="http://surrsur.us/about.html">About Me</a></li>
-        <li style="float:right"><a href="http://surrsur.us/contact.html">Contact</a></li>
-      </ul>
-      <hr class="divider">
-    </div>
+    {{navbar}}
     
     <div id="content">
       
@@ -61,7 +48,6 @@
           <li><p>Enter your phone number</p></li>
           <li><input type="range" min="1000000000" max="9999999999" value="5555555555" step="1" onchange="PhoneForm.updateValue(this.value)"/></li>
           <li><div id="js-phone-range"><p></p></li>
-          <li class="button"><button type="button" id="js-email-submit-button" onClick="PhoneForm.submitButtonPress()">Submit</button></li>
         </ul>
         <noscript><p>This phone form won't work without javascript</p></noscript>
       </div>

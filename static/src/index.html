@@ -8,27 +8,14 @@
     <meta name="description" content="An website">
     <meta name="author" content="Gray">
 
-    <link href="https://fonts.googleapis.com/css?family=Brawler" rel="stylesheet"> 
+    {{includes}}
     <link rel="stylesheet" href="./css/master.css">
 
   </head>
 
   <body>
     
-    <div id="nav-bar">
-      <ul class="nav">
-        <li><a href="http://surrsur.us/">Home</a></li>
-        <li class="dropdown"><a href="http://surrsur.us/projects.html">Projects</a>
-          <div class="dropdown-content">
-            <a href="http://surrsur.us/projects/ipa/english-to-ipa.html">English to IPA</a>
-          </div>
-        </li>
-        <!-- Not the intended order, ends up being inverted in browser -->
-        <li style="float:right"><a href="http://surrsur.us/about.html">About Me</a></li>
-        <li style="float:right"><a href="http://surrsur.us/contact.html">Contact</a></li>
-      </ul>
-      <hr class="divider">
-    </div>
+    {{navbar}}
     
     <div id="content">
       

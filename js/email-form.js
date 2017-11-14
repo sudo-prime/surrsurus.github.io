@@ -8,8 +8,8 @@ String.prototype.replaceAt = function(index, character) {
     return this.substr(0, index) + character + this.substr(index+character.length);
 }
 
-function nextChar(c) {
-    return String.fromCharCode(c.charCodeAt(0) + 1);
+String.prototype.nextChar = function() {
+    return String.fromCharCode(this.charCodeAt(0) + 1);
 }
 
 var EmailForm = {
@@ -32,7 +32,7 @@ var EmailForm = {
         for ( var i = 0; i < this.currentEmail.length; i++ ) {
             if ( this.currentEmail.charAt(i) == 'z' ) {
                 if ( i + 1 < this.currentEmail.length ) {
-                    this.currentEmail = this.currentEmail.replaceAt(i + 1, nextChar(this.currentEmail.charAt(i + 1)));
+                    this.currentEmail = this.currentEmail.replaceAt(i + 1, this.currentEmail.charAt(i + 1).nextChar());
                 } else {
                     this.currentEmail += 'a';
                 }
@@ -46,7 +46,7 @@ var EmailForm = {
         // If the first letter does not equal z, increment it
         // Otherwise check all other spaces
         if ( this.currentEmail.charAt(0) != 'z' ) {
-            this.currentEmail = this.currentEmail.replaceAt(0, nextChar(this.currentEmail.charAt(0)));
+            this.currentEmail = this.currentEmail.replaceAt(0, this.currentEmail.charAt(0).nextChar());
         } else {
             this.checkZs();
         }

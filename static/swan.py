@@ -22,7 +22,7 @@ FOUND   = '[@]'
 
 # Log to the console if verbose mode is on
 def log(string, label=NORMAL):
-  print label + ' ' + string
+  print(label + ' ' + string)
 
 # Copy contents of one file to another
 # and create the outfile if it doesn't exist

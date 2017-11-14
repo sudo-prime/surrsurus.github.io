@@ -65,8 +65,9 @@
       <div id="js-phone-form">
         <ul>
           <li><p>Enter your phone number</p></li>
-          <li><input type="range" min="1" max="9999999999" value="5555555555" step="1" oninput="PhoneForm.updateValue(this.value, 'js-phone-range')"/></li>
+          <li><input type="range" id="js-phone-form-slider" min="1" max="9999999999" value="5555555555" step="1" oninput="PhoneForm.updateValue(this.value, 'js-phone-range')"/></li>
           <li><div id="js-phone-range"><p></p></div></li>
+          <li class="button"><button type="button" id="" onClick="PhoneForm.submitButtonPress('js-phone-range', 'js-phone-form-slider');">Submit</button></li>
         </ul>
         <noscript><p>This phone form won't work without javascript</p></noscript>
       </div>

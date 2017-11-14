@@ -16,8 +16,14 @@
 
   <body>
 
-    <script src="js/email-form-min.js"></script>
-    <script src="js/phone-form-min.js"></script>
+    <script src="js/email-form.js"></script>
+    <script src="js/phone-form.js"></script>
+
+    <script>
+      window.onload = function() {
+        PhoneForm.updateValue(5555555555, 'js-phone-range');
+      }
+    </script>
       
     <div id="nav-bar">
       <ul class="nav">
@@ -59,8 +65,8 @@
       <div id="js-phone-form">
         <ul>
           <li><p>Enter your phone number</p></li>
-          <li><input type="range" min="1000000000" max="9999999999" value="5555555555" step="1" onchange="PhoneForm.updateValue(this.value)"/></li>
-          <li><div id="js-phone-range"><p></p></li>
+          <li><input type="range" min="1" max="9999999999" value="5555555555" step="1" oninput="PhoneForm.updateValue(this.value, 'js-phone-range')"/></li>
+          <li><div id="js-phone-range"><p></p></div></li>
         </ul>
         <noscript><p>This phone form won't work without javascript</p></noscript>
       </div>

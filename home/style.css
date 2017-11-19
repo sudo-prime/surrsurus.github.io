@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+
+.crop {
+	object-fit: cover; 
+	object-position: center; 
+	height: 800px;
+	width: 600px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.links {
+	position: absolute;
+    top: 47.26%;
+    left: 80%;
+    transform: translate(-50%, -106%);
+	width: 400px;
+	height: 356px;
+	overflow: hidden;	
+}
+
+
+.main{
+	height: 800px;
+	width: 1000px;
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	background-color: #2C2C2C;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.searchb {
+	position: absolute;
+    top: 97.5%;
+    left: 78.9%;
+    transform: translate(-50%, -50%);
+	width: 375px;
+}
+
+a {
+    color: white;
+	text-decoration: none;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+}
+
+a:hover {
+    color: #bbbbbb;
+}
+
+body {
+    background-color: #1B1B1B;
+}
+
+form input[type="text"] {
+    border: 1px solid #2C2C2C;
+    font-size: 16px;
+    padding: 10px;
+	width: 100%;
+	background-color: #2C2C2C;
+	outline: none;
+	color: white;
+	text-align: center;
+}
+
+table{
+	border: none;
+	width:100%;
+	height: 100%;
+	border-spacing: 0px;
+	color: white;
+	text-align: center;
+}
+
+td {
+	width: 133px;
+	height: 50px;
+}
+
+tr.theader td:hover {
+		background-color: #383838;
+}
+
+
+ul{vertical-align: top;
+	vertical-align: text-top;
+	text-align: top;
+	width:100%;
+	height: 100%;
+	list-style-type: none;
+}
